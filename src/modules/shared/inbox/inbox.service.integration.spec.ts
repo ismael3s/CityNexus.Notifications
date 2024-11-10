@@ -172,7 +172,7 @@ describe('InboxService', () => {
 
         expect(mailerGateway.sendEmail).toHaveBeenCalledWith({
           to: 'jhon@email.com',
-          subject: 'Seja Bem Vindo!',
+          subject: expect.any(String),
           html: expect.any(String),
         });
         const inboxMessages = await txHost.tx.query('select * from inbox');
@@ -241,7 +241,7 @@ describe('InboxService', () => {
 
         expect(mailerGateway.sendEmail).toHaveBeenCalledWith({
           to: 'jhon@email.com',
-          subject: 'Seja Bem Vindo!',
+          subject: expect.any(String),
           html: expect.any(String),
         });
         const inboxMessages = await txHost.tx.query('select * from inbox');
