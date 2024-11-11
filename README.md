@@ -22,7 +22,7 @@ Project responsible for dispatch notifications that are received from other proj
 
 - [ ] CI/CD
   - [x] Build and run tests
-  - [ ] Update image on DockerHub
+  - [x] Update image on DockerHub
   - [ ] Update K8S Manifest
 
 - [x] Docker
