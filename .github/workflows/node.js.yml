@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ 'master' ]
+    branches: [ 'main' ]
   pull_request:
-    branches: [ 'master' ]
+    branches: [ 'main' ]
 
 env:
   REGISTRY: docker.io
@@ -35,7 +35,6 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     outputs:
-      docker_image_tagged: ${{ steps.vars.outputs.docker_image_tagged }}
       sha_short: ${{ steps.vars.outputs.sha_short }}
 
     steps:
@@ -54,7 +53,6 @@ jobs:
         id: vars
         run: |
           echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-          echo "docker_image_tagged=ismael3s/CityNexus.Notifications:$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
         
       - name: Check outputs
         run: echo ${{ steps.vars.outputs.sha_short }}
