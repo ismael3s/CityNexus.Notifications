@@ -58,7 +58,7 @@ jobs:
         run: echo ${{ steps.vars.outputs.sha_short }}
 
       - name: Build and push
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v6
         with:
           push: true
           tags: |
