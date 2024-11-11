@@ -64,7 +64,7 @@ jobs:
         with:
           push: true
           tags: |
-            ismael3s/${{ steps.vars.outputs.image_name }}:latest
-            ismael3s/${{ steps.vars.outputs.image_name }}:${{ steps.vars.outputs.sha_short }}
+            ismael3s/citynexus.notifications:latest
+            ismael3s/citynexus.notifications:${{ steps.vars.outputs.sha_short }}
           context: .
           file: ./Dockerfile
