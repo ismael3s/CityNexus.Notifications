@@ -9,9 +9,10 @@ Project responsible for dispatch notifications that are received from other proj
 - [x] Example of integration tests using cls-transactional and TestContainers
 - [x] Inbox Pattern example in Nodejs/Nestjs
 
-- [x] TDD (Always in progress)
+- [ ] Testing
   - [ ] Unit Tests
   - [x] Integration Tests
+  - [x] TDD (Always in progress)
      
 - [ ] RabbitMQ
   - [x] Consue Messages from the queue
