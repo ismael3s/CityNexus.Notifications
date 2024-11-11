@@ -55,14 +55,16 @@ jobs:
           echo "image_name=${GITHUB_REPOSITORY,,}" >> $GITHUB_OUTPUT
 
       - name: Check outputs
-        run: echo ${{ steps.vars.outputs.sha_short }}
+        run: |
+          echo ${{ steps.vars.outputs.sha_short }}
+          echo ${{ steps.vars.outputs.image_name }}
 
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/${{ steps.vars.outputs.image_name }}:latest
-            ${{ secrets.DOCKER_USERNAME }}/${{ steps.vars.outputs.image_name }}:${{ steps.vars.outputs.sha_short }}
+            ismael3s/${{ steps.vars.outputs.image_name }}:latest
+            ismael3s/${{ steps.vars.outputs.image_name }}:${{ steps.vars.outputs.sha_short }}
           context: .
           file: ./Dockerfile
