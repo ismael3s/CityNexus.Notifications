@@ -65,10 +65,7 @@ jobs:
           file: ./Dockerfile
 
   update_k8s:
-      permissions:
-        contents: write
-        packages: write
-        repository-projects: write
+      permissions: write-all
       needs: push_to_registry
       runs-on: ubuntu-latest
       env:
