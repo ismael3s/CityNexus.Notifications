@@ -75,7 +75,7 @@ jobs:
           uses: actions/checkout@v4
           with:
             ref: main
-            token: ${{ secrets.GITHUB_TOKEN }}
+            token: ${{ secrets.CI_TOKEN }}
             repository: ismael3s/CityNexus.K8S
             persist-credentials: false 
             fetch-depth: 0             
@@ -90,3 +90,4 @@ jobs:
             github_token: ${{ secrets.CI_TOKEN }}
             branch: main
             repository: ismael3s/CityNexus.K8S
+            message: "Update CityNexus.Notifications image to $DOCKER_IMAGE"
