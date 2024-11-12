@@ -86,6 +86,6 @@ jobs:
         - name: Commit and push the changes
           uses: actions-js/push@master
           with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
+            github_token: ${{ secrets.CI_TOKEN }}
             branch: main
             repository: ismael3s/CityNexus.K8S
